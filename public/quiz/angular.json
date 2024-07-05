@@ -1,0 +1,167 @@
+[
+    {
+        "title": "Question 1",
+        "description": "What is Angular 2+?",
+        "options": [
+            "A platform for building web applications",
+            "A JavaScript library for building user interfaces",
+            "A CSS preprocessor",
+            "A tool for server-side rendering"
+        ],
+        "answer": 0
+    },
+    {
+        "title": "Question 2",
+        "description": "Which company developed Angular 2+?",
+        "options": [
+            "Google",
+            "Facebook",
+            "Microsoft",
+            "IBM"
+        ],
+        "answer": 0
+    },
+    {
+        "title": "Question 3",
+        "description": "Which of the following is a core feature of Angular 2+?",
+        "options": [
+            "Two-way data binding",
+            "JQuery-based DOM manipulation",
+            "Server-side rendering",
+            "Direct manipulation of the DOM"
+        ],
+        "answer": 0
+    },
+    {
+        "title": "Question 4",
+        "description": "What is the main purpose of the `@NgModule` decorator?",
+        "options": [
+            "To define a module and its components, services, and other configurations",
+            "To create a new component",
+            "To define a new route",
+            "To bind data to the view"
+        ],
+        "answer": 0
+    },
+    {
+        "title": "Question 5",
+        "description": "What is Angular's dependency injection system used for?",
+        "options": [
+            "To manage the instantiation of services and components",
+            "To handle HTTP requests",
+            "To manage application routing",
+            "To handle form validations"
+        ],
+        "answer": 0
+    },
+    {
+        "title": "Question 6",
+        "description": "Which Angular 2+ feature allows you to bind data from the component to the view?",
+        "options": [
+            "Data binding",
+            "Dependency Injection",
+            "Directives",
+            "Services"
+        ],
+        "answer": 0
+    },
+    {
+        "title": "Question 7",
+        "description": "What does `ngOnInit` do in an Angular component?",
+        "options": [
+            "It initializes component properties after the component is created",
+            "It renders the component's view",
+            "It handles user input",
+            "It initializes services"
+        ],
+        "answer": 0
+    },
+    {
+        "title": "Question 8",
+        "description": "Which Angular 2+ decorator is used to define a component?",
+        "options": [
+            "@Component",
+            "@NgModule",
+            "@Injectable",
+            "@Directive"
+        ],
+        "answer": 0
+    },
+    {
+        "title": "Question 9",
+        "description": "What does the `RouterModule` provide in Angular applications?",
+        "options": [
+            "Routing and navigation capabilities",
+            "Form management",
+            "HTTP client functionality",
+            "State management"
+        ],
+        "answer": 0
+    },
+    {
+        "title": "Question 10",
+        "description": "What is an Angular service typically used for?",
+        "options": [
+            "To share data and business logic across multiple components",
+            "To define the layout of a view",
+            "To manage the routing configuration",
+            "To initialize the application"
+        ],
+        "answer": 0
+    },
+    {
+        "title": "Question 11",
+        "description": "Which directive is used to create a custom component in Angular?",
+        "options": [
+            "@Component",
+            "@Directive",
+            "@NgModule",
+            "@Pipe"
+        ],
+        "answer": 0
+    },
+    {
+        "title": "Question 12",
+        "description": "How do you declare a route in Angular?",
+        "options": [
+            "By configuring the `RouterModule` in the `app.module.ts` file",
+            "By creating a new `Route` object",
+            "By using the `ngRoute` module",
+            "By defining routes in a `routes.ts` file"
+        ],
+        "answer": 0
+    },
+    {
+        "title": "Question 13",
+        "description": "What is the purpose of Angular’s `Observable`?",
+        "options": [
+            "To handle asynchronous data streams",
+            "To manage the state of components",
+            "To define the structure of HTML templates",
+            "To perform form validations"
+        ],
+        "answer": 0
+    },
+    {
+        "title": "Question 14",
+        "description": "Which Angular 2+ feature is used for form validation?",
+        "options": [
+            "Reactive Forms",
+            "HTTP Client",
+            "Routing",
+            "Directives"
+        ],
+        "answer": 0
+    },
+    {
+        "title": "Question 15",
+        "description": "What is the purpose of the `ngIf` directive?",
+        "options": [
+            "To conditionally include or exclude a DOM element",
+            "To repeat a DOM element",
+            "To bind data to a form",
+            "To define a custom HTML element"
+        ],
+        "answer": 0
+    }
+]

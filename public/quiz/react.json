@@ -1,0 +1,167 @@
+[
+    {
+        "title": "Question 1",
+        "description": "What is React?",
+        "options": [
+            "A JavaScript library for building user interfaces",
+            "A CSS framework",
+            "A database management system",
+            "A programming language"
+        ],
+        "answer": 0
+    },
+    {
+        "title": "Question 2",
+        "description": "Who developed React?",
+        "options": [
+            "Google",
+            "Facebook",
+            "Microsoft",
+            "Twitter"
+        ],
+        "answer": 1
+    },
+    {
+        "title": "Question 3",
+        "description": "What is the virtual DOM?",
+        "options": [
+            "A lightweight copy of the real DOM",
+            "A database management system",
+            "A new programming language",
+            "A server-side framework"
+        ],
+        "answer": 0
+    },
+    {
+        "title": "Question 4",
+        "description": "What is JSX?",
+        "options": [
+            "A syntax extension for JavaScript",
+            "A type of CSS stylesheet",
+            "A new database technology",
+            "A server-side language"
+        ],
+        "answer": 0
+    },
+    {
+        "title": "Question 5",
+        "description": "How do you create a React component?",
+        "options": [
+            "By creating a function or class that extends React.Component",
+            "By writing a CSS stylesheet",
+            "By setting up a Node.js server",
+            "By creating a new HTML file"
+        ],
+        "answer": 0
+    },
+    {
+        "title": "Question 6",
+        "description": "What is the purpose of `render()` method in React?",
+        "options": [
+            "To describe what the UI should look like",
+            "To handle HTTP requests",
+            "To manage application state",
+            "To create a new React component"
+        ],
+        "answer": 0
+    },
+    {
+        "title": "Question 7",
+        "description": "What is the correct syntax for importing React in a file?",
+        "options": [
+            "import React from 'react';",
+            "require('react');",
+            "import React from 'React';",
+            "include React from 'react';"
+        ],
+        "answer": 0
+    },
+    {
+        "title": "Question 8",
+        "description": "What is `state` in a React component?",
+        "options": [
+            "An object that holds the data of a component",
+            "A method to render the UI",
+            "A function to handle events",
+            "A style property for components"
+        ],
+        "answer": 0
+    },
+    {
+        "title": "Question 9",
+        "description": "What is the purpose of `props` in React?",
+        "options": [
+            "To pass data from parent to child components",
+            "To manage component state",
+            "To handle side effects",
+            "To define component styles"
+        ],
+        "answer": 0
+    },
+    {
+        "title": "Question 10",
+        "description": "What are React hooks?",
+        "options": [
+            "Functions that let you use state and other React features in functional components",
+            "Methods to handle HTTP requests",
+            "Classes that extend React.Component",
+            "Tools to style components"
+        ],
+        "answer": 0
+    },
+    {
+        "title": "Question 11",
+        "description": "Which hook is used to manage state in a functional component?",
+        "options": [
+            "useState",
+            "useEffect",
+            "useContext",
+            "useReducer"
+        ],
+        "answer": 0
+    },
+    {
+        "title": "Question 12",
+        "description": "What does the `useEffect` hook do?",
+        "options": [
+            "It allows you to perform side effects in functional components",
+            "It manages the state of the component",
+            "It passes props between components",
+            "It creates a new component"
+        ],
+        "answer": 0
+    },
+    {
+        "title": "Question 13",
+        "description": "What is the purpose of `key` prop in React lists?",
+        "options": [
+            "To help React identify which items have changed",
+            "To set the initial state of a component",
+            "To pass data between components",
+            "To define styles for list items"
+        ],
+        "answer": 0
+    },
+    {
+        "title": "Question 14",
+        "description": "What is the `ReactDOM.render()` method used for?",
+        "options": [
+            "To render a React element into the DOM",
+            "To create a new React component",
+            "To update the component state",
+            "To handle user events"
+        ],
+        "answer": 0
+    },
+    {
+        "title": "Question 15",
+        "description": "What is `context` used for in React?",
+        "options": [
+            "To share state between components without passing props",
+            "To manage component lifecycle methods",
+            "To create new React hooks",
+            "To style components"
+        ],
+        "answer": 0
+    }
+]
