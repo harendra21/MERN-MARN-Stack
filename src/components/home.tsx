@@ -28,7 +28,7 @@ const Home = () => {
     return (
         <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 p-4">
             <div className="w-full max-w-6xl">
-                <h1 className="text-3xl font-bold mb-8 text-center">Available Quizzes</h1>
+                <h1 className="text-3xl font-bold mb-8 text-center">Quizzes</h1>
                 <div className="grid gap-6 md:gap-8 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 xs:grid-cols-1">
                     {quizzes.map((quiz, index) => (
                         <Link
@@ -41,6 +41,10 @@ const Home = () => {
                         </Link>
                     ))}
                 </div>
+
+                <h1 className="text-3xl font-bold mb-8 mt-8 text-center">Interview Questions</h1>
+                <h2 className='text-center'>Comming Soon...</h2>
+
             </div>
         </div>
     );

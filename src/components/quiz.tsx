@@ -11,6 +11,7 @@ interface Option {
 const Quiz = () => {
     const { quizType } = useParams<{ quizType: string }>();  // Get quizType from URL parameter
     const [quizData, setQuizData] = useState<Option[]>([]);
+    const [quizDetails, setQuizDetails] = useState({ "title": "" });
     const [currentQuestion, setCurrentQuestion] = useState(0);
     const [selectedOption, setSelectedOption] = useState<number | null>(null);
     const [score, setScore] = useState(0);
@@ -30,7 +31,21 @@ const Quiz = () => {
             }
         };
 
+        const fetchQuizDetails = async () => {
+            try {
+                const response = await fetch(`/quiz/allquizzes.json`);  // Fetch based on quizType
+                const data = await response.json();
+                const quiz = data.find((quiz: any) => quiz.route === quizType);
+                if (quiz) {
+                    setQuizDetails(quiz);
+                }
+            } catch (error) {
+                console.error('Error fetching quiz data:', error);
+            }
+        };
+
         fetchQuizData();
+        fetchQuizDetails();
     }, [quizType]);  // Depend on quizType to fetch data when it changes
 
     const handleOptionClick = (index: number) => {
@@ -47,7 +62,14 @@ const Quiz = () => {
             setSelectedOption(null);
         } else {
             setShowScore(true);
-            navigate('/results', { state: { score, total: quizData.length } });
+            navigate('/results', { state: { score, total: quizData.length, quizDetails } });
+        }
+    };
+
+    const handlePreviousQuestion = () => {
+        if (currentQuestion > 0) {
+            setCurrentQuestion(currentQuestion - 1);
+            setSelectedOption(null);
         }
     };
 
@@ -57,7 +79,6 @@ const Quiz = () => {
 
     return (
         <div className="min-h-screen flex items-center justify-center bg-gray-100 ">
-
             <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md ">
                 {showScore ? (
                     <div className="text-center">
@@ -65,6 +86,8 @@ const Quiz = () => {
                     </div>
                 ) : (
                     <div>
+                        <h1 className="text-2xl font-bold mb-4 text-center">{quizDetails?.title} Quiz</h1>
+
                         <h2 className="text-xl font-bold mb-4">{quizData[currentQuestion].title}</h2>
                         <p className="mb-4">{quizData[currentQuestion].description}</p>
                         <div className="space-y-2">
@@ -72,18 +95,27 @@ const Quiz = () => {
                                 <button
                                     key={index}
                                     onClick={() => handleOptionClick(index)}
-                                    className={`block w-full text-left px-4 py-2 rounded-lg border ${selectedOption === index ? 'bg-blue-500 text-white' : 'bg-white text-black'} hover:bg-blue-500 hover:text-white`}
+                                    className={`block w-full text-left px-4 py-2 rounded-lg border ${selectedOption === index ? 'bg-blue-500 text-white' : 'bg-white text-black'} hover:bg-blue-500 hover:text-white `}
                                 >
                                     {option}
                                 </button>
                             ))}
                         </div>
-                        <button
-                            onClick={handleNextQuestion}
-                            className="mt-4 w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700"
-                        >
-                            Next Question
-                        </button>
+                        <div className="mt-4 flex justify-between">
+                            <button
+                                onClick={handlePreviousQuestion}
+                                className="bg-gray-600 text-white py-2 px-4 rounded-lg hover:bg-gray-700"
+                                disabled={currentQuestion === 0}
+                            >
+                                Previous Question
+                            </button>
+                            <button
+                                onClick={handleNextQuestion}
+                                className="bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700"
+                            >
+                                Next Question
+                            </button>
+                        </div>
                     </div>
                 )}
             </div>

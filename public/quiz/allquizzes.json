@@ -25,13 +25,13 @@
         "route": "angular"
     },
     {
-        "title": "NodeJs",
+        "title": "Node Js",
         "description": "Node Js Quiz",
         "route": "nodejs"
     },
     {
-        "title": "Mongodb",
-        "description": "Mongodb Quiz",
+        "title": "Mongo DB",
+        "description": "Mongo DB Quiz",
         "route": "mongodb"
     },
     {
