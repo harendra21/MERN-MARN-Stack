@@ -24,7 +24,6 @@ const Quiz = () => {
             try {
                 const response = await fetch(`/quiz/${quizType}.json`);  // Fetch based on quizType
                 const data = await response.json();
-                console.log(data);
                 setQuizData(data);
             } catch (error) {
                 console.error('Error fetching quiz data:', error);
