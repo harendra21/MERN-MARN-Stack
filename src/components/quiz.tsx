@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
+import { db, Query } from "../lib/appwrite"
 
 interface Option {
     title: string;
@@ -22,30 +23,22 @@ const Quiz = () => {
         if (!quizType) return;
 
         const fetchQuizData = async () => {
-            try {
-                const response = await fetch(`/quiz/${quizType}.json`);  // Fetch based on quizType
-                const data = await response.json();
-                setQuizData(data);
-            } catch (error) {
-                console.error('Error fetching quiz data:', error);
-            }
-        };
-
-        const fetchQuizDetails = async () => {
-            try {
-                const response = await fetch(`/quiz/allquizzes.json`);  // Fetch based on quizType
-                const data = await response.json();
-                const quiz = data.find((quiz: any) => quiz.route === quizType);
-                if (quiz) {
-                    setQuizDetails(quiz);
+            db.listDocuments(
+                "665dbea70000ce8c4636",
+                "665dbebd0022a5a57f8f",
+                [
+                    Query.equal("route", quizType)
+                ]
+            ).then((data: any) => {
+                if (data.total > 0) {
+                    let questions = JSON.parse(data.documents[0].questions)
+                    setQuizData(questions);
+                    setQuizDetails({ "title": data.documents[0].title })
                 }
-            } catch (error) {
-                console.error('Error fetching quiz data:', error);
-            }
+            })
         };
 
         fetchQuizData();
-        fetchQuizDetails();
     }, [quizType]);  // Depend on quizType to fetch data when it changes
 
     const handleOptionClick = (index: number) => {

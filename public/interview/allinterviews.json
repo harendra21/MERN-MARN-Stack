@@ -1,0 +1,12 @@
+[
+    {
+        "title": "HTML",
+        "description": "HTML Interview questions & answers",
+        "route": "html"
+    },
+    {
+        "title": "CSS",
+        "description": "CSS Interview questions & answers",
+        "route": "css"
+    }
+]

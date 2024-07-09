@@ -1,0 +1,314 @@
+[
+    {
+        "title": "What does CSS stand for?",
+        "answer": "CSS stands for Cascading Style Sheets. It is a language used to describe the presentation and layout of a web page written in HTML or XML. CSS controls the visual appearance of web pages, including elements such as colors, fonts, and spacing."
+    },
+    {
+        "title": "What is the purpose of CSS?",
+        "answer": "CSS (Cascading Style Sheets) is used to style and layout web pages. It allows web developers to change the visual presentation of HTML elements, such as adjusting fonts, colors, sizes, spacing, and creating responsive designs. CSS separates content from design, making web development more efficient and manageable."
+    },
+    {
+        "title": "What are the different ways to apply CSS to a web page?",
+        "answer": "There are three main ways to apply CSS to a web page: Inline CSS, Internal CSS, and External CSS. Inline CSS uses the `style` attribute within an HTML element to apply styles. Internal CSS uses a `<style>` tag within the `<head>` section of the HTML document. External CSS links to a separate `.css` file using the `<link>` tag, allowing for consistent styling across multiple pages."
+    },
+    {
+        "title": "What is the difference between class selectors and ID selectors in CSS?",
+        "answer": "Class selectors and ID selectors are both used to apply styles to HTML elements, but they have different purposes and rules. Class selectors are defined with a period (e.g., `.classname`) and can be used on multiple elements. They are ideal for applying the same styles to various elements. ID selectors are defined with a hash (e.g., `#idname`) and must be unique within a document, making them suitable for styling a single, specific element."
+    },
+    {
+        "title": "What is the CSS box model?",
+        "answer": "The CSS box model describes the rectangular boxes generated for elements in the document tree. It consists of four layers: content (the actual text or image), padding (space between the content and the border), border (the border surrounding the padding), and margin (space between the border and the outer edge of the element). Understanding the box model is crucial for controlling element spacing and layout."
+    },
+    {
+        "title": "What is the difference between padding and margin?",
+        "answer": "Padding and margin are both used for spacing but serve different purposes. Padding is the space between the content of an element and its border, increasing the size of the element's box and affecting the background color. Margin is the space outside the border of an element, pushing other elements away and creating separation without affecting the element's background."
+    },
+    {
+        "title": "What is the use of the z-index property in CSS?",
+        "answer": "The `z-index` property controls the stacking order of positioned elements (those with `position` set to `relative`, `absolute`, or `fixed`). Elements with higher `z-index` values appear above elements with lower values. This property is essential for layering elements and managing visual overlap on web pages."
+    },
+    {
+        "title": "What are pseudo-classes in CSS?",
+        "answer": "Pseudo-classes are keywords added to selectors to specify a special state of an element. Examples include `:hover` (applies styles when the mouse is over the element), `:focus` (applies styles when the element is in focus), and `:nth-child()` (selects elements based on their position in a parent element). They are used to apply styles dynamically based on user interactions or element states."
+    },
+    {
+        "title": "What are pseudo-elements in CSS?",
+        "answer": "Pseudo-elements are used to style specific parts of an element. Common pseudo-elements include `::before` (inserts content before an element's content), `::after` (inserts content after an element's content), `::first-line` (styles the first line of text in an element), and `::first-letter` (styles the first letter of text). They allow for additional styling without adding extra HTML elements."
+    },
+    {
+        "title": "What is the difference between relative and absolute positioning?",
+        "answer": "Relative positioning (`position: relative;`) positions an element relative to its normal position in the document flow, allowing adjustments with `top`, `right`, `bottom`, and `left`. Absolute positioning (`position: absolute;`) positions an element relative to its nearest positioned ancestor or the initial containing block, removing it from the document flow and allowing for precise placement."
+    },
+    {
+        "title": "What is the flexbox layout in CSS?",
+        "answer": "Flexbox is a CSS layout module that provides a more efficient way to align and distribute space among items in a container. It simplifies the design of complex layouts with properties like `display: flex;`, `justify-content` (aligns items along the main axis), `align-items` (aligns items along the cross axis), and `flex-direction` (defines the direction of the main axis)."
+    },
+    {
+        "title": "What is the CSS Grid layout?",
+        "answer": "CSS Grid Layout is a two-dimensional layout system that allows you to design web layouts using rows and columns. It provides properties like `display: grid;`, `grid-template-columns` (defines the number and size of columns), `grid-template-rows` (defines the number and size of rows), and `grid-area` (positions items within the grid). Grid layout is useful for creating complex, responsive designs."
+    },
+    {
+        "title": "What is the difference between display: none and visibility: hidden?",
+        "answer": "`display: none` hides the element and removes it from the document flow, meaning it does not take up any space on the page. `visibility: hidden` hides the element but keeps its space in the document flow. This means that the element's area still affects the layout, but it is not visible."
+    },
+    {
+        "title": "What are CSS media queries?",
+        "answer": "CSS media queries are used to apply different styles based on the characteristics of the device or viewport, such as screen size or orientation. They are defined using the `@media` rule, allowing you to create responsive designs that adapt to various devices and screen sizes."
+    },
+    {
+        "title": "What is the purpose of the CSS float property?",
+        "answer": "The `float` property positions elements to the left or right of their containing block, allowing text and inline elements to wrap around them. It was historically used for layout, but modern techniques like Flexbox and Grid are now preferred for layout tasks."
+    },
+    {
+        "title": "What is the difference between inline and block elements in CSS?",
+        "answer": "Inline elements do not break the flow of content and only take up as much width as necessary, such as `<span>` and `<a>`. Block elements start on a new line and take up the full width available, such as `<div>` and `<p>`. Block elements create a new 'block' of content, while inline elements flow with text and other inline elements."
+    },
+    {
+        "title": "What is the CSS clear property used for?",
+        "answer": "The `clear` property specifies how floating elements should be handled. It can have values like `left` (clear left floats), `right` (clear right floats), `both` (clear both sides), or `none` (default behavior with no clearing). It helps manage layout issues when dealing with floated elements."
+    },
+    {
+        "title": "What is the purpose of the CSS overflow property?",
+        "answer": "The `overflow` property controls how content that exceeds an element's box is handled. It can be set to `visible` (content overflows the box), `hidden` (content is cut off), `scroll` (scrollbars appear for overflow), or `auto` (scrollbars appear as needed). It is used for managing content that does not fit within a container."
+    },
+    {
+        "title": "What is the difference between RGB and RGBA in CSS?",
+        "answer": "`RGB` (Red, Green, Blue) specifies colors using three color components, while `RGBA` (Red, Green, Blue, Alpha) adds an Alpha channel for opacity. RGB defines the color without transparency, while RGBA allows you to set the transparency level of the color."
+    },
+    {
+        "title": "What is the CSS position property used for?",
+        "answer": "The `position` property determines how an element is positioned on the page. Values include `static` (default, no positioning), `relative` (relative to its normal position), `absolute` (relative to the nearest positioned ancestor), `fixed` (relative to the viewport), and `sticky` (based on the user's scroll position)."
+    },
+    {
+        "title": "What are CSS animations?",
+        "answer": "CSS animations allow you to create smooth, gradual changes in styles over time. They are defined using the `@keyframes` rule, which specifies the intermediate steps of the animation. The `animation` property applies these keyframes and controls the duration, timing, and iteration of the animation."
+    },
+    {
+        "title": "What is the difference between transition and animation in CSS?",
+        "answer": "CSS transitions provide a way to animate the change from one state to another with a specified duration, timing function, and delay. CSS animations offer more complex and advanced animations, allowing for multiple states and keyframes with more control over the animation process."
+    },
+    {
+        "title": "What is the CSS box-shadow property?",
+        "answer": "The `box-shadow` property adds shadow effects around an element's frame. It accepts values for the horizontal and vertical offsets, blur radius, spread radius, and color of the shadow, allowing you to create depth and visual interest on elements."
+    },
+    {
+        "title": "What is the CSS text-shadow property?",
+        "answer": "The `text-shadow` property adds shadow effects to text. It accepts values for the horizontal and vertical offsets, blur radius, and color of the shadow, enhancing text readability and creating visual emphasis."
+    },
+    {
+        "title": "What is the CSS background property used for?",
+        "answer": "The `background` property is a shorthand for setting multiple background-related properties, such as background color, background image, background position, background size, and background repeat, allowing you to style the background of an element."
+    },
+    {
+        "title": "What is the CSS calc() function used for?",
+        "answer": "The `calc()` function performs mathematical calculations to determine CSS property values. It allows you to combine units (e.g., pixels and percentages) and perform operations like addition, subtraction, multiplication, and division to create flexible layouts."
+    },
+    {
+        "title": "What is the CSS specificity rule?",
+        "answer": "CSS specificity determines which styles are applied when multiple rules match the same element. It is calculated based on the types of selectors used, with inline styles having the highest specificity, followed by IDs, classes, attributes, and pseudo-classes, and finally element selectors and pseudo-elements."
+    },
+    {
+        "title": "What are CSS variables?",
+        "answer": "CSS variables, also known as custom properties, are used to store values that can be reused throughout the CSS. Defined using `--variable-name` syntax, they can be updated dynamically and are accessed using the `var()` function, enabling easier maintenance and consistency."
+    },
+    {
+        "title": "What is the CSS content property?",
+        "answer": "The `content` property is used with pseudo-elements (`::before` and `::after`) to generate content that is added before or after an element's actual content. It supports text, images, and other content and is useful for adding decorative elements or additional information."
+    },
+    {
+        "title": "What is the difference between the CSS :nth-child() and :nth-of-type() pseudo-classes?",
+        "answer": "`:nth-child()` selects elements based on their position among siblings, regardless of type, while `:nth-of-type()` selects elements based on their position among siblings of the same type. For example, `:nth-child(2)` targets the second child of any type, whereas `:nth-of-type(2)` targets the second `<div>` among sibling `<div>` elements."
+    },
+    {
+        "title": "What is the CSS display property used for?",
+        "answer": "The `display` property specifies how an element is rendered on the page. Common values include `block` (elements start on a new line and take up the full width), `inline` (elements do not break the flow of content), `flex` (a flexible box layout), and `grid` (a grid layout)."
+    },
+    {
+        "title": "What is the CSS transition property used for?",
+        "answer": "The `transition` property allows you to create smooth changes between CSS property values over a specified duration. It includes properties such as `transition-property` (which properties to animate), `transition-duration` (animation length), `transition-timing-function` (animation speed curve), and `transition-delay` (delay before starting the animation)."
+    },
+    {
+        "title": "What is the CSS @keyframes rule?",
+        "answer": "The `@keyframes` rule defines the intermediate steps of a CSS animation using keyframes. It specifies styles for different stages of the animation sequence, allowing you to create complex animations by setting styles for `from` and `to` or using percentage-based steps."
+    },
+    {
+        "title": "What is the purpose of the CSS clip-path property?",
+        "answer": "The `clip-path` property defines a clipping region to make only a specific part of an element visible. It can use geometric shapes, SVG paths, or inset rectangles to control which portions of an element are shown, useful for creating custom shapes and effects."
+    },
+    {
+        "title": "What is the CSS :root pseudo-class?",
+        "answer": ":root matches the document's root element, which is the `<html>` element in an HTML document. It is often used to define global CSS variables that are accessible throughout the stylesheet, providing a way to manage and reuse values across different elements."
+    },
+    {
+        "title": "What is the purpose of the CSS filter property?",
+        "answer": "The `filter` property applies graphical effects to an element, such as blur, brightness, contrast, grayscale, and more. It enables visual modifications and adjustments, creating effects like blurring images or changing colors without altering the original content."
+    },
+    {
+        "title": "What is the CSS object-fit property?",
+        "answer": "The `object-fit` property specifies how the content of a replaced element (like an image or video) should be resized to fit its container. It has values such as `fill` (stretches to fill the container), `contain` (resizes while maintaining aspect ratio), `cover` (covers the container while maintaining aspect ratio), and `none` (does not resize)."
+    },
+    {
+        "title": "What is the CSS object-position property?",
+        "answer": "The `object-position` property specifies the alignment of content within a replaced element's box. It controls where the content is positioned within the element, with values like `center`, `top left`, `bottom right`, and others."
+    },
+    {
+        "title": "What is the CSS writing-mode property?",
+        "answer": "The `writing-mode` property defines the direction in which text and other content are laid out in a document. It can be set to values like `horizontal-tb` (horizontal text flow from top to bottom), `vertical-rl` (vertical text flow from right to left), and `vertical-lr` (vertical text flow from left to right)."
+    },
+    {
+        "title": "What is the CSS grid-template-columns property?",
+        "answer": "The `grid-template-columns` property defines the number and size of columns in a grid layout. It specifies the column structure, with values that can be fixed (e.g., `100px`), flexible (e.g., `1fr`), or a combination of both to create complex grid designs."
+    },
+    {
+        "title": "What is the CSS grid-template-rows property?",
+        "answer": "The `grid-template-rows` property defines the number and size of rows in a grid layout. It specifies the row structure, with values that can be fixed (e.g., `100px`), flexible (e.g., `1fr`), or a combination of both to create diverse grid layouts."
+    },
+    {
+        "title": "What is the CSS grid-gap property?",
+        "answer": "The `grid-gap` property, also known as `gap`, specifies the spacing between rows and columns in a grid layout. It can be set to a single value (for uniform gaps) or two values (for row and column gaps), allowing for control over the spacing of grid items."
+    },
+    {
+        "title": "What is the CSS aspect-ratio property?",
+        "answer": "The `aspect-ratio` property sets a preferred aspect ratio for an element, which helps maintain the proportions of its content. For example, `aspect-ratio: 16/9` ensures that the element's width and height maintain a 16:9 ratio."
+    },
+    {
+        "title": "What is the CSS place-items property?",
+        "answer": "The `place-items` property is a shorthand for `align-items` and `justify-items` properties in grid or flex containers. It sets the alignment of items along both the block and inline axes, allowing for consistent alignment of child elements."
+    },
+    {
+        "title": "What is the CSS place-content property?",
+        "answer": "The `place-content` property is a shorthand for `align-content` and `justify-content` properties. It controls the alignment of the grid or flex container’s content along both the block and inline axes, affecting the spacing and alignment of the container’s children."
+    },
+    {
+        "title": "What is the CSS place-self property?",
+        "answer": "The `place-self` property is a shorthand for `align-self` and `justify-self` properties in grid or flex containers. It controls the alignment of an individual item along both the block and inline axes, allowing specific alignment of that item."
+    },
+    {
+        "title": "What is the CSS mix-blend-mode property?",
+        "answer": "The `mix-blend-mode` property determines how an element’s content should blend with the content of its parent element and the element’s background. It supports blend modes like `multiply`, `screen`, `overlay`, and others, creating visual effects based on blending modes."
+    },
+    {
+        "title": "What is the CSS background-blend-mode property?",
+        "answer": "The `background-blend-mode` property specifies how background images and background colors should blend together. It offers various blend modes like `multiply`, `screen`, and `overlay`, which affect how multiple background layers interact."
+    },
+    {
+        "title": "What is the CSS will-change property?",
+        "answer": "The `will-change` property gives the browser a hint about which properties will change in the future, helping it optimize rendering performance. By specifying properties like `transform`, `opacity`, or `scroll-position`, you can improve the performance of animations or dynamic changes."
+    },
+    {
+        "title": "What is the CSS grid-auto-flow property?",
+        "answer": "The `grid-auto-flow` property controls how auto-placed items are added to the grid. It can be set to `row` (items are placed in rows), `column` (items are placed in columns), or `dense` (items are placed in the smallest available space). It helps manage the placement of grid items."
+    },
+    {
+        "title": "What is the CSS object-fit property?",
+        "answer": "The `object-fit` property specifies how the content of a replaced element (such as an image or video) should be resized to fit its container. It includes values like `fill` (stretch content), `contain` (fit content while maintaining aspect ratio), `cover` (cover container while maintaining aspect ratio), and `none` (no resizing)."
+    },
+    {
+        "title": "What is the CSS scroll-snap-type property?",
+        "answer": "The `scroll-snap-type` property controls the behavior of snap points during scrolling. It can be set to `none` (no snapping), `mandatory` (scrolling always snaps to a snap point), or `proximity` (scrolling snaps to a snap point if close). It helps create smooth, controlled scrolling experiences."
+    },
+    {
+        "title": "What is the CSS scroll-snap-align property?",
+        "answer": "The `scroll-snap-align` property defines how an element should snap into place within the scrolling container. It can be set to values like `start` (snap to the start edge), `center` (snap to the center), or `end` (snap to the end edge). It is used to create snapping points within a scrolling area."
+    },
+    {
+        "title": "What is the CSS clamp() function?",
+        "answer": "The `clamp()` function sets a value that adjusts between a defined minimum and maximum range based on a preferred value. It accepts three arguments: a minimum value, a preferred value, and a maximum value, allowing you to create responsive designs that adapt to different screen sizes."
+    },
+    {
+        "title": "What is the CSS min() function?",
+        "answer": "The `min()` function returns the smallest value from a set of values. It accepts two or more values and applies the smallest one. It is useful for creating responsive designs by setting dynamic sizes or limits for properties."
+    },
+    {
+        "title": "What is the CSS max() function?",
+        "answer": "The `max()` function returns the largest value from a set of values. It accepts two or more values and applies the largest one. It is useful for setting responsive design properties or constraints that adapt to different screen sizes."
+    },
+    {
+        "title": "What is the CSS var() function?",
+        "answer": "The `var()` function is used to retrieve the value of a CSS variable (custom property). Defined with `--variable-name` syntax, variables can be accessed using `var(--variable-name)`, allowing for reusable and maintainable CSS code."
+    },
+    {
+        "title": "What is the CSS initial value?",
+        "answer": "The `initial` value for CSS properties resets the property to the default value specified by the CSS specification. It is used to override styles and revert properties to their initial state."
+    },
+    {
+        "title": "What is the CSS inherit value?",
+        "answer": "The `inherit` value for CSS properties makes the property inherit the value from its parent element. It is used to maintain consistent styles across nested elements."
+    },
+    {
+        "title": "What is the CSS unset value?",
+        "answer": "The `unset` value for CSS properties resets the property to either `initial` or `inherit` based on whether the property is inherited or not. It helps revert properties to their natural state."
+    },
+    {
+        "title": "What is the CSS revert value?",
+        "answer": "The `revert` value for CSS properties resets the property to the value it would have had if no rules had been applied to it, based on the browser's default styles or user-defined styles."
+    },
+    {
+        "title": "What is the CSS :not() pseudo-class?",
+        "answer": "The `:not()` pseudo-class selects elements that do not match a given selector. It is used to apply styles to elements that do not meet specific criteria, such as `:not(.classname)` to target all elements that do not have the `classname` class."
+    },
+    {
+        "title": "What is the CSS :empty pseudo-class?",
+        "answer": "The `:empty` pseudo-class selects elements that have no children, including text nodes. It is used to apply styles to elements that do not contain any content or child elements."
+    },
+    {
+        "title": "What is the CSS :nth-of-type() pseudo-class?",
+        "answer": "The `:nth-of-type()` pseudo-class selects elements of a specific type based on their position among sibling elements of the same type. For example, `p:nth-of-type(2)` selects the second `<p>` element among its sibling `<p>` elements."
+    },
+    {
+        "title": "What is the CSS :nth-child() pseudo-class?",
+        "answer": "The `:nth-child()` pseudo-class selects elements based on their position among all siblings, regardless of type. For example, `div:nth-child(3)` selects the third child of its parent element, regardless of whether it is a `<div>` or another element."
+    },
+    {
+        "title": "What is the CSS :last-child pseudo-class?",
+        "answer": "The `:last-child` pseudo-class selects the last child element of its parent. It is used to apply styles specifically to the final child element of a parent container."
+    },
+    {
+        "title": "What is the CSS :first-of-type pseudo-class?",
+        "answer": "The `:first-of-type` pseudo-class selects the first element of its type among sibling elements. For example, `p:first-of-type` targets the first `<p>` element among its sibling elements, regardless of other element types."
+    },
+    {
+        "title": "What is the CSS :last-of-type pseudo-class?",
+        "answer": "The `:last-of-type` pseudo-class selects the last element of its type among sibling elements. For example, `p:last-of-type` targets the last `<p>` element among its sibling elements."
+    },
+    {
+        "title": "What is the CSS :root pseudo-class?",
+        "answer": ":root represents the highest-level parent element, typically the `<html>` element in HTML documents. It is often used for defining global CSS variables (custom properties) that can be accessed throughout the stylesheet."
+    },
+    {
+        "title": "What is the CSS min-height property?",
+        "answer": "The `min-height` property sets the minimum height of an element. It ensures that the element's height will not be less than the specified value, allowing for flexibility in responsive designs."
+    },
+    {
+        "title": "What is the CSS max-height property?",
+        "answer": "The `max-height` property sets the maximum height of an element. It limits the height of the element, preventing it from exceeding the specified value while allowing the element to expand up to that limit."
+    },
+    {
+        "title": "What is the CSS min-width property?",
+        "answer": "The `min-width` property sets the minimum width of an element. It ensures that the element's width will not be less than the specified value, which is useful for maintaining consistent element sizes in responsive designs."
+    },
+    {
+        "title": "What is the CSS max-width property?",
+        "answer": "The `max-width` property sets the maximum width of an element. It restricts the width of the element to not exceed the specified value, useful for creating responsive layouts and preventing overflow."
+    },
+    {
+        "title": "What is the CSS column-count property?",
+        "answer": "The `column-count` property specifies the number of columns an element's text should be divided into. It is used to create multi-column layouts for text content, improving readability and design."
+    },
+    {
+        "title": "What is the CSS column-gap property?",
+        "answer": "The `column-gap` property sets the space between columns in a multi-column layout. It controls the distance between the text columns, allowing for adjustments in the spacing between columns."
+    },
+    {
+        "title": "What is the CSS column-width property?",
+        "answer": "The `column-width` property specifies the minimum width of columns in a multi-column layout. It ensures that the columns have a minimum width, with the number of columns adjusting to fit the available space."
+    },
+    {
+        "title": "What is the CSS column-span property?",
+        "answer": "The `column-span` property specifies how an element should span across multiple columns in a multi-column layout. It can be set to `none` (default, does not span), `all` (spans all columns), or `column` (spans across the current column)."
+    },
+    {
+        "title": "What is the CSS break-inside property?",
+        "answer": "The `break-inside` property controls how breaks inside an element are handled. It can have values like `auto` (default, allows breaks), `avoid` (prevents breaks), and `inherit` (inherits the break behavior from the parent element)."
+    }
+]
