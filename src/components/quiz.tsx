@@ -17,6 +17,7 @@ const Quiz = () => {
     const [selectedOption, setSelectedOption] = useState<number | null>(null);
     const [score, setScore] = useState(0);
     const [showScore, setShowScore] = useState(false);
+    const [userAnswers, setUserAnswers] = useState<{ questionIndex: number, selectedOption: number | null, isCorrect: boolean }[]>([]);
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -46,7 +47,9 @@ const Quiz = () => {
     };
 
     const handleNextQuestion = () => {
-        if (selectedOption === quizData[currentQuestion]?.answer) {
+        const isCorrect = selectedOption === quizData[currentQuestion]?.answer;
+        setUserAnswers([...userAnswers, { questionIndex: currentQuestion, selectedOption, isCorrect }]);
+        if (isCorrect) {
             setScore(score + 1);
         }
         const nextQuestion = currentQuestion + 1;
@@ -55,7 +58,7 @@ const Quiz = () => {
             setSelectedOption(null);
         } else {
             setShowScore(true);
-            navigate('/results', { state: { score, total: quizData.length, quizDetails } });
+            navigate('/results', { state: { score, total: quizData.length, quizDetails, userAnswers, quizData } });
         }
     };
 
