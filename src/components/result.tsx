@@ -14,20 +14,17 @@ const Results = () => {
                         const answer = userAnswers[index] || {};
                         return (
                             <div key={index} className="mb-4 p-4 rounded-lg">
-                                <h3 className="text-lg font-bold">{index + 1}: {question.description}</h3>
+                                <h3 className="text-lg font-bold mb-4">{index + 1}: {question.description}</h3>
                                 <div className="space-y-2">
                                     {question.options.map((option: string, optIndex: number) => (
                                         <div
                                             key={optIndex}
-                                            className={`px-4 py-2 rounded-lg border ${optIndex === answer.selectedOption ? (answer.isCorrect ? 'bg-green-200' : 'bg-red-200') : 'bg-white'}`}
+                                            className={`px-4 py-2 rounded-lg border ${optIndex === answer.selectedOption ? (answer.isCorrect ? 'bg-green-200 font-bold' : 'bg-red-200') : (optIndex === question.answer ? 'bg-green-200 font-bold' : 'bg-white')}`}
                                         >
                                             {option}
                                         </div>
                                     ))}
                                 </div>
-                                <p className="mt-2">
-                                    {answer.isCorrect ? 'Correct' : 'Wrong'} - Your answer: {answer.selectedOption !== null ? question.options[answer.selectedOption] : 'No answer selected'}
-                                </p>
                             </div>
                         );
                     })}
