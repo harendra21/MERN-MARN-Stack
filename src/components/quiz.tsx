@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import { db, Query } from "../lib/appwrite"
+import { db, Query } from "../lib/appwrite";
 
 interface Option {
     title: string;
@@ -10,7 +10,7 @@ interface Option {
 }
 
 const Quiz = () => {
-    const { quizType } = useParams<{ quizType: string }>();  // Get quizType from URL parameter
+    const { quizType } = useParams<{ quizType: string }>();
     const [quizData, setQuizData] = useState<Option[]>([]);
     const [quizDetails, setQuizDetails] = useState({ "title": "" });
     const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -32,15 +32,15 @@ const Quiz = () => {
                 ]
             ).then((data: any) => {
                 if (data.total > 0) {
-                    let questions = JSON.parse(data.documents[0].questions)
+                    let questions = JSON.parse(data.documents[0].questions);
                     setQuizData(questions);
-                    setQuizDetails({ "title": data.documents[0].title })
+                    setQuizDetails({ "title": data.documents[0].title });
                 }
-            })
+            });
         };
 
         fetchQuizData();
-    }, [quizType]);  // Depend on quizType to fetch data when it changes
+    }, [quizType]);
 
     const handleOptionClick = (index: number) => {
         setSelectedOption(index);
@@ -48,24 +48,29 @@ const Quiz = () => {
 
     const handleNextQuestion = () => {
         const isCorrect = selectedOption === quizData[currentQuestion]?.answer;
-        setUserAnswers([...userAnswers, { questionIndex: currentQuestion, selectedOption, isCorrect }]);
+        const updatedAnswers = [...userAnswers];
+        updatedAnswers[currentQuestion] = { questionIndex: currentQuestion, selectedOption, isCorrect };
+
+        setUserAnswers(updatedAnswers);
+
         if (isCorrect) {
             setScore(score + 1);
         }
+
         const nextQuestion = currentQuestion + 1;
         if (nextQuestion < quizData.length) {
             setCurrentQuestion(nextQuestion);
             setSelectedOption(null);
         } else {
             setShowScore(true);
-            navigate('/results', { state: { score, total: quizData.length, quizDetails, userAnswers, quizData } });
+            navigate('/results', { state: { score, total: quizData.length, quizDetails, userAnswers: updatedAnswers, quizData } });
         }
     };
 
     const handlePreviousQuestion = () => {
         if (currentQuestion > 0) {
             setCurrentQuestion(currentQuestion - 1);
-            setSelectedOption(null);
+            setSelectedOption(userAnswers[currentQuestion - 1]?.selectedOption || null);
         }
     };
 
@@ -74,8 +79,8 @@ const Quiz = () => {
     }
 
     return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-100 ">
-            <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md ">
+        <div className="min-h-screen flex items-center justify-center bg-gray-100">
+            <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
                 {showScore ? (
                     <div className="text-center">
                         <h2 className="text-2xl font-bold">You scored {score} out of {quizData.length}</h2>
@@ -83,7 +88,6 @@ const Quiz = () => {
                 ) : (
                     <div>
                         <h1 className="text-2xl font-bold mb-4 text-center">{quizDetails?.title} Quiz</h1>
-
                         <h2 className="text-xl font-bold mb-4">{quizData[currentQuestion].title}</h2>
                         <p className="mb-4">{quizData[currentQuestion].description}</p>
                         <div className="space-y-2">
@@ -91,7 +95,7 @@ const Quiz = () => {
                                 <button
                                     key={index}
                                     onClick={() => handleOptionClick(index)}
-                                    className={`block w-full text-left px-4 py-2 rounded-lg border ${selectedOption === index ? 'bg-blue-500 text-white' : 'bg-white text-black'} hover:bg-blue-500 hover:text-white `}
+                                    className={`block w-full text-left px-4 py-2 rounded-lg border ${selectedOption === index ? 'bg-blue-500 text-white' : 'bg-white text-black'} hover:bg-blue-500 hover:text-white`}
                                 >
                                     {option}
                                 </button>
