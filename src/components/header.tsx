@@ -10,9 +10,8 @@ const Header = () => {
                 <nav>
                     <ul className="flex space-x-4">
                         <li><Link to="/" className="text-white hover:text-gray-200">Home</Link></li>
-                        {/* <li><Link to="/about" className="text-white hover:text-gray-200">About</Link></li>
-                        <li><Link to="/services" className="text-white hover:text-gray-200">Services</Link></li>
-                        <li><Link to="/contact" className="text-white hover:text-gray-200">Contact</Link></li> */}
+                        <li><a href='https://github.com/harendra21/MERN-MARN-Stack' target='_blank' className="text-white hover:text-gray-200">Github</a></li>
+
                     </ul>
                 </nav>
             </div>
